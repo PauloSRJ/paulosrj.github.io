@@ -11,7 +11,16 @@ app.controller('ContactController', function ($scope, $http) {
         $scope.submitted = true;
         $scope.submitButtonDisabled = true;
         if (contactform.$valid) {
-            $http({
+            (function(data, emailjs){
+                emailjs.init("user_w2W1T1jBayarcAzAF3t9q");
+                // parameters: service_id, template_id, template_parameters
+                emailjs.send("gmail", "email_de_contato", data).then(function(response) {
+                   console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
+                }, function(err) {
+                   console.log("FAILED. error=", err);
+                });
+            })($scope.formData, emailjs);
+            /*$http({
                 method  : 'POST',
                 url     : 'contact-form.php',
                 data    : $.param($scope.formData),  //param method from jQuery
@@ -28,7 +37,7 @@ app.controller('ContactController', function ($scope, $http) {
 					$scope.resultMessage = data.message;
                     $scope.result='bg-danger';
                 }
-            });
+            });*/
         } else {
             $scope.submitButtonDisabled = false;
             $scope.resultMessage = 'Failed :( Please fill out all the fields.';
