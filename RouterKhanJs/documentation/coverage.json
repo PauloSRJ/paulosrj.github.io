@@ -1,0 +1,22 @@
+{
+  "coverage": "0%",
+  "expectCount": 9,
+  "actualCount": 0,
+  "files": {
+    "src/Router.js": {
+      "expectCount": 9,
+      "actualCount": 0,
+      "undocumentLines": [
+        3,
+        5,
+        12,
+        13,
+        16,
+        22,
+        29,
+        50,
+        59
+      ]
+    }
+  }
+}
