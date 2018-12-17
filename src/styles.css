@@ -321,4 +321,5 @@ button.slick-arrow.slick-prev {
     margin-left: 0px !important;
     margin-bottom: 20px !important;
   }
+  .cert-container{ height: auto !important; }
 }
