@@ -86,7 +86,7 @@ body {
       rgba(0, 0, 0, 0.2) 0%,
       rgba(0, 0, 0, 0.2) 100%
     ),
-    url(EU.png);
+    url(EUu.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 5px;
@@ -321,5 +321,5 @@ button.slick-arrow.slick-prev {
     margin-left: 0px !important;
     margin-bottom: 20px !important;
   }
-  .cert-container{ height: auto !important; }
+  .cert-container{ height: auto !important;padding-bottom: 15px; }
 }
