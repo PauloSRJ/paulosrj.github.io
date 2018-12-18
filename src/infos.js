@@ -1,6 +1,7 @@
 import skills from "./skills";
 import experience from "./experience";
 import certifications from "./certifications";
+import portfolio from "./portfolio";
 
 var config = {
   age: 18,
@@ -12,7 +13,8 @@ var config = {
   sourcerer: "https://sourcerer.io/paulaodev",
   skills,
   experience,
-  certifications
+  certifications,
+  portfolio
 };
 
 export default config;

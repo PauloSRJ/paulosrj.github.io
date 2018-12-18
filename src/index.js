@@ -1,10 +1,20 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import Swal from "sweetalert2";
 import Slider from "react-slick";
 import Config from "./infos";
 
 import "./styles.css";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
+var settings = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  className: "slider-exp"
+};
 
 const Profile = () => (
   <div className="col-3 profile">
@@ -110,24 +120,58 @@ const Exp = ({ user }) => (
   </div>
 );
 
+const toggleImage = ({ image, name, link }) => {
+  // Swal({
+  //   imageUrl: image,
+  //   imageHeight: 500,
+  //   imageWidth: 600,
+  //   customClass: "imgresponsive",
+  //   imageAlt: name
+  // });
+  Swal({
+    title: name,
+    html:
+      "<br/><a href='" +
+      link +
+      "' target='_blank' class='btn btn-primary'>Go to site</a><br/><code>Note! Some sites do not link for security reasons</code>",
+    imageUrl: image,
+    imageWidth: 900,
+    imageHeight: 450,
+    imageAlt: name,
+    animation: false
+  });
+};
+
+const Portfolio = () => (
+  <div className="col-12 portfolio">
+    <Card title="Portfolio" className="">
+      <div className="row">
+        {Config.portfolio.map((port, key) => (
+          <div className="port-col" key={key}>
+            <img
+              src={port.image}
+              alt={port.type + " " + port.name}
+              onClick={() => toggleImage(port)}
+            />
+            <div className="about">
+              <h4>{port.name}</h4>
+              <p>{port.text}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </Card>
+  </div>
+);
+
 // const Animate = e => {
 //   console.log(e.target.toggleClass("animated infinite bounce delay-5s"));
 // };
 
 class App extends React.Component {
   state = {};
-  settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    className: "slider-exp"
-  };
 
   render() {
-    var settings = this.settings;
-
     return (
       <div className="App container-flex">
         {/* Primary Container */}
@@ -166,6 +210,9 @@ class App extends React.Component {
               </div>
             </Card>
           </div>
+        </div>
+        <div className="row">
+          <Portfolio />
         </div>
       </div>
     );
