@@ -284,6 +284,7 @@ button.slick-arrow.slick-prev {
   }
   .profile {
     margin: 0px !important;
+    border-radius: 0px!important;
   }
   .im {
     text-align: center;
