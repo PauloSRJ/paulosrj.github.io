@@ -4,8 +4,8 @@
   "name": "Paulo Sergio",
   "userimg": "https://avatars2.githubusercontent.com/u/29682878?v=4",
   "sort": "star",
-  "order": "asc",
-  "includeFork": false,
+  "order": "desc",
+  "includeFork": true,
   "theme": "dark.css"
  }
 ]
