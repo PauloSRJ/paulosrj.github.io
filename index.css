@@ -438,9 +438,9 @@ body{
   --bg-color: rgb(10, 10, 10);
   --text-color: #fff;
   --blog-gray-color: rgb(180, 180, 180);
-  --background-image: linear-gradient(90deg, rgba(10, 10, 10, 0.6), rgb(10, 10, 10, 1)), url("https://scontent.faep13-1.fna.fbcdn.net/v/t1.15752-9/s2048x2048/61129331_362744777683075_449763675247476736_n.jpg");
+  --background-image: linear-gradient(90deg, rgba(10, 10, 10, 0.6), rgb(10, 10, 10, 1)), url("https://cdn1.imggmi.com/uploads/2019/5/23/cf0cc242176fac66a72d62f3d2277430-full.jpg");
   --background-background: linear-gradient(0deg, rgba(10, 10, 10, 1), rgba(10, 10, 10, 0.6)),
-    url("https://scontent.faep13-1.fna.fbcdn.net/v/t1.15752-9/s2048x2048/61129331_362744777683075_449763675247476736_n.jpg") center center fixed;
+    url("https://cdn1.imggmi.com/uploads/2019/5/23/cf0cc242176fac66a72d62f3d2277430-full.jpg") center center fixed;
   --height: 50vh;
 }
 #display h1 {
@@ -462,6 +462,6 @@ body{
 @media (max-width: 800px) {
   :root {
     --background-image: linear-gradient(0deg, rgba(10, 10, 10, 1), rgba(10, 10, 10, 0)),
-    url("https://scontent.faep13-1.fna.fbcdn.net/v/t1.15752-9/s2048x2048/61129331_362744777683075_449763675247476736_n.jpg") !important;
+    url("https://cdn1.imggmi.com/uploads/2019/5/23/cf0cc242176fac66a72d62f3d2277430-full.jpg") !important;
   }
 }
